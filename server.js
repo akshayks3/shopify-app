@@ -15,8 +15,8 @@ const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev });
 const handle = app.getRequestHandler()
-const SHOPIFY_API_SECRET_KEY = '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'
-const SHOPIFY_API_KEY = '139c49437fb0f2635b23f640433f5a42'
+const SHOPIFY_API_SECRET_KEY = 'f0d738cf6f7644e3a99ec0507b03662d'
+const SHOPIFY_API_KEY = 'f0d738cf6f7644e3a99ec0507b03662d'
 
 app.prepare().then(() => {
     const server = new Koa();
