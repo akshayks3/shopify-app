@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev });
 const handle = app.getRequestHandler()
-const SHOPIFY_API_SECRET_KEY = 'f0d738cf6f7644e3a99ec0507b03662d'
+const SHOPIFY_API_SECRET_KEY = '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'
 const SHOPIFY_API_KEY = 'f0d738cf6f7644e3a99ec0507b03662d'
 
 app.prepare().then(() => {
