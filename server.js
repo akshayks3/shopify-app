@@ -12,11 +12,11 @@ const axios = require('axios')
 dotenv.config();
 
 const port = process.env.PORT || 3000;
-const dev = process.env.NODE_ENV === 'production'
+const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev });
 const handle = app.getRequestHandler()
-
-const { SHOPIFY_API_SECRET_KEY, SHOPIFY_API_KEY } = process.env
+const SHOPIFY_API_SECRET_KEY = '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'
+const SHOPIFY_API_KEY = '139c49437fb0f2635b23f640433f5a42'
 
 app.prepare().then(() => {
     const server = new Koa();
