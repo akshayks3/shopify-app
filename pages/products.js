@@ -16,7 +16,6 @@ class Products extends React.Component {
                     <Card sectioned>
                         <div>
                             <p>List of products here</p>
-                            <button onClick={}></button>
                         </div>
                     </Card>
                 </Layout.AnnotatedSection>
