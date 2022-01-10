@@ -1,0 +1,8 @@
+# Environment Configuration
+.env
+
+# Dependency directory
+node_modules
+
+# next build output
+.next/
