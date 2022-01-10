@@ -11,8 +11,8 @@ const axios = require('axios')
 
 dotenv.config();
 
-const port = parseInt(process.env.port) || 3000;
-const dev = process.env.NODE_ENV !== 'production'
+const port = process.env.PORT || 3000;
+const dev = process.env.NODE_ENV === 'production'
 const app = next({ dev });
 const handle = app.getRequestHandler()
 
@@ -31,7 +31,7 @@ app.prepare().then(() => {
         async afterAuth(ctx) {
             const { shop, accessToken } = ctx.session;
             console.log(shop, 'shop')
-            ctx.redirect('https://' + shop + '/apps')
+            ctx.redirect('/')
         }
     }))
 
@@ -49,7 +49,7 @@ app.prepare().then(() => {
         ctx.res.statusCode = 200;
     })
 
-    
+
 
     server.use(router.routes());
     server.use(router.allowedMethods());
